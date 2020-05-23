@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "dev": "NODE_ENV=dev nodemon app.js",
-    "start": "NODE_ENV=production node app.js"
+    "start": "NODE_ENV=production $(npm bin)/knex --migrations-directory ./db/migrations/ migrate:latest && node app.js"
   },
   "engines": {
     "node": "12.16.3",
