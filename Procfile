@@ -1,1 +1,1 @@
-web: NODE_ENV=production $(npm bin)/knex --migrations-directory ./db/migrations/ migrate:latest && node app.js
+web: NODE_ENV=production ./node_modules/.bin/knex --migrations-directory ./db/migrations/ migrate:latest && node app.js
